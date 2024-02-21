@@ -1,9 +1,9 @@
-export function addScheduleItem(date) {
+export function addScheduleItem(date, text) {
     var scheduleList = document.getElementById("scheduleList");
     var li = document.createElement("li");
     var a = document.createElement("a");
     a.href = "schedule/" + date + ".html";
-    a.textContent = formatDate(date);
+    a.textContent = formatDate(date) + " " + text;
     li.appendChild(a);
     scheduleList.appendChild(li);
 }
