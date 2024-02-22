@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f2f2f2;
     padding: 20px;
+    text-align: center;
 }
 
 input[type="text"] {
@@ -13,21 +14,10 @@ input[type="text"] {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: left;
 }
 
-/* 검색 기능을 위한 스타일 */
-#searchInput {
-    margin-top: 20px;
-}
 
-h1, h2 {
-    text-align: center;
-    color: #333; /* 제목 색상 */
-}
-
-h2 {
-    margin-top: 20px;
-}
 
 #scheduleList {
     display: flex;
@@ -43,7 +33,6 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 80%;
     cursor: pointer;
-    text-align: center;
     transition: all 0.3s ease;
 }
 
@@ -54,7 +43,7 @@ h2 {
 
 .schedule a {
     text-decoration: none;
-    color: #333; /* 링크 텍스트 색상 */
+    color: inherit;
     font-weight: bold;
 }
 
