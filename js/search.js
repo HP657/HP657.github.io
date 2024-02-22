@@ -1,19 +1,18 @@
 document.getElementById('searchInput').addEventListener('input', function() {
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, divs, a, i, txtValue;
     input = document.getElementById('searchInput');
-    filter = input.value.replace(/\s/g, '');
-    ul = document.getElementById('scheduleList');
-    li = ul.getElementsByTagName('li');
+    filter = input.value.toUpperCase().replace(/\s/g, '');
+    divs = document.getElementsByClassName('schedule');
 
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName('a')[0];
+    for (i = 0; i < divs.length; i++) {
+        a = divs[i].getElementsByTagName('a')[0];
         txtValue = a.textContent || a.innerText;
-        var itemText = txtValue.replace(/\s/g, '');
+        var itemText = txtValue.toUpperCase().replace(/\s/g, '');
 
-        if (itemText.toUpperCase().indexOf(filter.toUpperCase()) > -1) {
-            li[i].style.display = '';
+        if (itemText.indexOf(filter) > -1) {
+            divs[i].style.display = '';
         } else {
-            li[i].style.display = 'none';
+            divs[i].style.display = 'none';
         }
     }
 });
