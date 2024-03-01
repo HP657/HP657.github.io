@@ -37,8 +37,6 @@
             })
             .then(response => response.json())
             .then(json => {
-                console.log(date)
-                console.log(json);
                 var resultEl = document.getElementById(elementId);
                 var mealInfo = json.mealServiceDietInfo[1].row[0];
                 resultEl.innerHTML = `
@@ -55,7 +53,7 @@
 
         var today = new Date();
         var tomorrow = new Date(today);
-        tomorrow.setDate(tomorrow.getDate() + 4);
+        tomorrow.setDate(tomorrow.getDate() + 1);
 
         var todayStr = today.toISOString().split('T')[0].replace(/-/g, '');
         var tomorrowStr = tomorrow.toISOString().split('T')[0].replace(/-/g, '');
