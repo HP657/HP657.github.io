@@ -41,12 +41,12 @@ input[type="text"] {
     transform: translateY(-2px);
 }
 
-.schedule a {
+a {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
 }
 
-.schedule a:hover {
+a:hover {
     text-decoration: underline;
 }
