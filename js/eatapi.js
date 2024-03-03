@@ -34,10 +34,22 @@ function fetchMealInfo(date, elementId) {
 
 var today = new Date();
 var tomorrow = new Date(today);
-tomorrow.setDate(tomorrow.getDate() + 1);
+tomorrow.setDate(today.getDate() + 1);
 
-var todayStr = today.toISOString().split('T')[0].replace(/-/g, '');
-var tomorrowStr = tomorrow.toISOString().split('T')[0].replace(/-/g, '');
+var todayYear = today.getFullYear();
+var todayMonth = (today.getMonth() + 1).toString().padStart(2, '0');
+var todayDay = today.getDate().toString().padStart(2, '0');
+var todayStr = todayYear + todayMonth + todayDay;
+
+var tomorrowYear = tomorrow.getFullYear();
+var tomorrowMonth = (tomorrow.getMonth() + 1).toString().padStart(2, '0');
+var tomorrowDay = tomorrow.getDate().toString().padStart(2, '0');
+var tomorrowStr = tomorrowYear + tomorrowMonth + tomorrowDay;
+
+console.log(todayStr);
+console.log(tomorrowStr);
+
+
 
 fetchMealInfo(todayStr, 'resultToday');
 fetchMealInfo(tomorrowStr, 'resultTomorrow');
