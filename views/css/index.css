@@ -50,3 +50,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+
+#link > h2 {
+    display: inline-block;
+    margin-right: 10px;
+}
