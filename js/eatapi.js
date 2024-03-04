@@ -46,10 +46,6 @@ var tomorrowMonth = (tomorrow.getMonth() + 1).toString().padStart(2, '0');
 var tomorrowDay = tomorrow.getDate().toString().padStart(2, '0');
 var tomorrowStr = tomorrowYear + tomorrowMonth + tomorrowDay;
 
-console.log(todayStr);
-console.log(tomorrowStr);
-
-
 
 fetchMealInfo(todayStr, 'resultToday');
 fetchMealInfo(tomorrowStr, 'resultTomorrow');
