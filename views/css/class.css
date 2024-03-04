@@ -29,3 +29,13 @@ a {
     color: inherit;
     color: #333;
 }
+
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
