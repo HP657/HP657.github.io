@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+#link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.link-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 45%;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    #link {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link-card {
+        width: 80%;
+    }
+}
