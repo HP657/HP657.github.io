@@ -15,6 +15,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; 
 }
 
 .link-card {
@@ -52,5 +53,6 @@ a:hover {
 
     .link-card {
         width: 80%;
+        margin: 0 auto;
     }
 }
